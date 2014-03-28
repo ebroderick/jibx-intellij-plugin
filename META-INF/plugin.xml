@@ -1,0 +1,53 @@
+<idea-plugin version="2">
+  <id>com.gsicommerce.jibx.intellij</id>
+  <name>jibx</name>
+  <version>1.0</version>
+  <vendor email="brodericke@gsicommerce.com" url="http://www.gsicommerce.com">GSI Commerce</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <small>most HTML tags may be used</small>
+      ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <small>most HTML tags may be used</small>
+      ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="107.105"/>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+
+  </project-components>
+
+    <module-components>
+        <component>
+            <implementation-class>com.gsicommerce.jibx.intellij.BindingCompilerModuleComponent</implementation-class>
+        </component>
+    </module-components>
+
+  <actions>
+     <action class="com.gsicommerce.jibx.intellij.AddMappingAction" text="Use as JiBX mapping" id="jibx-use-as-mapping">
+          <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+     </action>
+      <action class="com.gsicommerce.jibx.intellij.DeleteMappingAction" text="Don't use as JiBX mapping" id="jibx-not-use-as-mapping">
+          <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+      </action>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+</idea-plugin>
